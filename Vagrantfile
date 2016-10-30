@@ -2,8 +2,13 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-  config.vm.box = "bento/centos-7.2"
+  config.vm.box = "box-cutter/ubuntu1404-desktop"
   config.vm.hostname = "heartbeat"
+
+  config.vm.provider "virtualbox" do |v|
+    v.linked_clone = true
+    v.gui = true
+  end
 
 #config.vm.network "forwarded_port", guest: 80, host: 8080
 #  config.vm.network "forwarded_port", guest: 3306, host: 3306
