@@ -4,6 +4,10 @@
 # yum -y -q update
 
 # systemctl disable firewalld
+apt-get -y install gcc libcurl4-openssl-dev libexpat1-dev
+# wget https://physionet.org/physiotools/wfdb.tar.gz
+# tar xfvz wfdb.tar.gz
+
 echo "
 ## Colorize the ls output ##
 alias ls='ls --color=auto'
